@@ -1,0 +1,58 @@
+.timerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  transition: all 0.2s linear;
+}
+
+.cardWrapper {
+  position: relative;
+  padding: 1rem 1.3rem;
+  z-index: 20;
+}
+
+.cardWrapper::before {
+  content: "";
+  position: absolute;
+  background-color: var(--n3);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.cardWrapper::after {
+  content: "";
+  position: absolute;
+  background-color: var(--n2);
+  left: 0;
+  bottom: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  opacity: 0.8;
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.numberText {
+  font-size: 40px;
+  color: var(--p2);
+}
+
+@media screen and (min-width: 450px) {
+  .cardWrapper {
+    padding: 0;
+    height: 101px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

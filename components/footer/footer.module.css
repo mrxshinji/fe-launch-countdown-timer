@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  width: 50vw;
+  display: flex;
+  z-index: 20;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 5;
+}
+
+.icon {
+  scale: 1.5;
+}
+
+.icon:hover path {
+  fill: var(--p2);
+}
+
+@media screen and (min-width: 450px) {
+  .container {
+    width: 40vw;
+  }
+  .icon {
+    scale: 2;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .container {
+    width: 20vw;
+  }
+  .icon {
+    scale: 1.8;
+  }
+}
